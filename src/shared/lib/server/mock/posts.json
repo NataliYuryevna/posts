@@ -1,0 +1,11 @@
+[
+  {
+    "id": "1",
+    "title": "Redux toolkit",
+    "content": "It is cool thing"
+  },{
+    "id": "2",
+    "title": "TypeScript",
+    "content": "I want to use more projects with these plugins"
+  }
+]
