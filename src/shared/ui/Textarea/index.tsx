@@ -1,4 +1,5 @@
 import {ChangeEvent, Fragment, useEffect, useState} from 'react';
+import './index.css'
 
 interface propsTextarea {
     name: string,
