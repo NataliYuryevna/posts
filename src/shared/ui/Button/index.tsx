@@ -1,4 +1,5 @@
 import './index.css'
+import React from "react";
 
 interface propsButton {
     text: string
@@ -8,7 +9,13 @@ interface propsButton {
 }
 
 function Button(props:propsButton) {
-    return <button type={props.type} onClick={props.onClick} className={props.className || 'primary' }>{props.text}</button>
+    function onClickButton(e:React.MouseEvent<HTMLButtonElement,MouseEvent>) {
+        e.preventDefault();
+        e.stopPropagation();
+        props.onClick()
+    }
+
+    return <button type={props.type} onClick={onClickButton} className={props.className || 'primary' }>{props.text}</button>
 }
 
 export default Button

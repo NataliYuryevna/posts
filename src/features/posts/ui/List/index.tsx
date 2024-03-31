@@ -1,10 +1,10 @@
 import './index.css';
 import ArticlePost from "../../../../entities/ui/ArticlePost";
-import {selectAllPost} from "../../../../entities/lib/slice";
-import {useAppSelector} from "../../../../entities/lib/hooks/redux";
+import {selectAllPost} from "../../../../entities/lib/slice/post";
+import {usePostsSelector} from "../../../../entities/lib/hooks/redux";
 
 function PostsList() {
-    const posts = useAppSelector(selectAllPost);
+    const posts = usePostsSelector(selectAllPost);
 
     return (
         <section>
