@@ -1,6 +1,6 @@
-import {useUsersSelector} from "../../lib/hooks/redux";
-import {selectAllUsers} from "../../lib/slice/user";
-function ArticlePost(props:{userId: string}) {
+import {useUsersSelector} from "../../../lib/hooks/redux";
+import {selectAllUsers} from "../../../lib/slice/user";
+function PostAuthor(props:{userId: string}) {
 
     const users = useUsersSelector(selectAllUsers);
 
@@ -11,4 +11,4 @@ function ArticlePost(props:{userId: string}) {
     );
 }
 
-export default ArticlePost;
+export default PostAuthor;

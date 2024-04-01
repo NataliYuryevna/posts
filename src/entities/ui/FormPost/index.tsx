@@ -12,11 +12,10 @@ interface propsForm {
 
 function FormPost(props:propsForm) {
     const [addPost, setAddPost] = useState<boolean|undefined>(undefined);
-    const newPost = useRef<typePost>({title: '', content: '' , userId: ''});
+    const newPost = useRef<typePost>({title: '', content: '' , userId: '', date: new Date().toString()});
 
     useEffect(()=>{
         if(addPost === false && newPost.current.title.length && newPost.current.content.length  && newPost.current.userId.length ) {
-            console.log(newPost.current);
             props.setAddPost(newPost.current);
         }
     },[addPost])

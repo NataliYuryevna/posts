@@ -7,3 +7,6 @@ article {
     text-align: left;
     margin: 20px auto;
 }
+article p span:first-child {
+    padding-right: 15px;
+}

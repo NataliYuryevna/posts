@@ -16,7 +16,8 @@ const postSlice = createSlice({
                         id:nanoid(),
                         title,
                         content,
-                        userId
+                        userId,
+                        date: new Date().toString()
                     }
                 }
             }
