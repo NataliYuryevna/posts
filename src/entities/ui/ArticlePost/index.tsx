@@ -2,9 +2,8 @@ import {typePosts} from "../../../shared/lib/server";
 import './index.css';
 import PostAuthor from "./PostAuthor";
 import {TimeAgo} from "../../../shared/ui";
-
-type propsArticle = Omit<typePosts,'id'>;
-function ArticlePost(props:propsArticle) {
+import ReactionsButton from "./ReactionsButton";
+function ArticlePost(props:typePosts) {
 
     return (
         <article>
@@ -14,6 +13,7 @@ function ArticlePost(props:propsArticle) {
                 <PostAuthor userId={props.userId}/>
                 <TimeAgo timestamp={props.date}/>
             </p>
+            <ReactionsButton {...props}/>
         </article>
     );
 }

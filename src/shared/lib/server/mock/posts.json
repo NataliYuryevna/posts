@@ -3,11 +3,25 @@
     "id": "1",
     "title": "Redux toolkit",
     "content": "It is cool thing",
-    "date": ""
+    "date": "",
+    "reactions": {
+      "thumbsUp": 0,
+      "wow": 0,
+      "heart": 0,
+      "rocket": 0,
+      "coffee": 0
+    }
   },{
     "id": "2",
     "title": "TypeScript",
     "content": "I want to write more projects with these plugins",
-    "date": ""
+    "date": "",
+    "reactions": {
+      "thumbsUp": 0,
+      "wow": 0,
+      "heart": 0,
+      "rocket": 0,
+      "coffee": 0
+    }
   }
 ]
