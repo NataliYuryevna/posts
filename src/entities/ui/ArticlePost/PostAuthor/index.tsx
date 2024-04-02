@@ -1,5 +1,4 @@
-import {useUsersSelector} from "../../../lib/hooks/redux";
-import {selectAllUsers} from "../../../lib/slice/user";
+import {useUsersSelector, selectAllUsers} from "../../../lib";
 function PostAuthor(props:{userId: string}) {
 
     const users = useUsersSelector(selectAllUsers);

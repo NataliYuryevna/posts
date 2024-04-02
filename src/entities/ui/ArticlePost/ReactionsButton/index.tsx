@@ -1,6 +1,5 @@
-import {useAppDispatch} from "../../../lib/hooks/redux";
-import {reactionAdded} from "../../../lib/slice/post";
-import {typePosts} from "../../../../shared/lib/server";
+import {useAppDispatch, reactionAdded} from "../../../lib";
+import type {typePosts} from "../../../../shared/lib/server";
 import {Fragment} from "react";
 import {Button} from "../../../../shared/ui";
 

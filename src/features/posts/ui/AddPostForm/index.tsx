@@ -1,8 +1,6 @@
-import FormPost from "../../../../entities/ui/FormPost";
+import {FormPost} from "../../../../entities/ui";
 import type {typePosts} from "../../../../shared/lib/server";
-import {useAppDispatch, useUsersSelector} from "../../../../entities/lib/hooks/redux";
-import {postAdded} from "../../../../entities/lib/slice/post";
-import {selectAllUsers} from "../../../../entities/lib/slice/user";
+import {useAppDispatch, useUsersSelector, postAdded, selectAllUsers} from "../../../../entities/lib";
 
 function AddPostForm() {
     const dispatch = useAppDispatch();
