@@ -3,7 +3,7 @@ import './index.css'
 
 interface propsSelect {
     name: string,
-    callback: (v:string)=>void,
+    callback: (v: string) => void,
     labelText: string,
     changeValue: boolean,
     options: Array<{
@@ -12,17 +12,17 @@ interface propsSelect {
     }>
 }
 
-function Select(props:propsSelect) {
+function Select(props: propsSelect) {
     const [valueSelect, setValue] = useState<string>('');
 
-    const changeHandel = (e:ChangeEvent<HTMLSelectElement>)=>setValue(e.target.value);
+    const changeHandel = (e: ChangeEvent<HTMLSelectElement>) => setValue(e.target.value);
 
-    useEffect(()=>{
-        if(props.changeValue) {
+    useEffect(() => {
+        if (props.changeValue) {
             props.callback(valueSelect);
             setValue('');
         }
-    },[props.changeValue])
+    }, [props.changeValue])
 
     return (
         <Fragment>

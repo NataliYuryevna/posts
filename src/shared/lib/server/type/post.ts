@@ -1,10 +1,10 @@
 interface typePosts {
     id: string,
-    title:string,
+    title: string,
     content: string,
     userId: string,
     date: string,
-    reactions:{
+    reactions: {
         thumbsUp: number,
         wow: number,
         heart: number,

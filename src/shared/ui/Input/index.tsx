@@ -3,21 +3,22 @@ import './index.css'
 
 interface propsInput {
     name: string,
-    callback: (v:string)=>void,
+    callback: (v: string) => void,
     labelText: string,
     changeValue: boolean
 }
-function Index(props:propsInput) {
+
+function Index(props: propsInput) {
     const [valueText, setValue] = useState<string>('');
 
-    const changeHandel = (e:ChangeEvent<HTMLInputElement>)=>setValue(e.target.value);
+    const changeHandel = (e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value);
 
-    useEffect(()=>{
-        if(props.changeValue) {
+    useEffect(() => {
+        if (props.changeValue) {
             props.callback(valueText);
             setValue('');
         }
-    },[props.changeValue])
+    }, [props.changeValue])
 
     return (
         <Fragment>

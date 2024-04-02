@@ -1,6 +1,6 @@
 interface typeUsers {
     id: string,
-    name:string
+    name: string
 }
 
 export default typeUsers

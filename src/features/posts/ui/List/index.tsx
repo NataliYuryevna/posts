@@ -5,7 +5,7 @@ import {selectAllPost, usePostsSelector} from "../../../../entities/lib";
 function PostsList() {
     const posts = usePostsSelector(selectAllPost);
 
-    const sortPosts = posts.slice().sort((a,b)=>Date.parse(b.date) - Date.parse(a.date));
+    const sortPosts = posts.slice().sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 
     return (
         <section>

@@ -1,4 +1,4 @@
-function TimeAgo(props:{timestamp: string}) {
+function TimeAgo(props: { timestamp: string }) {
 
     function time_ago(time: any) {
 
@@ -57,7 +57,7 @@ function TimeAgo(props:{timestamp: string}) {
 
 
     return (
-        <span>{time_ago(props.timestamp) }</span>
+        <span>{time_ago(props.timestamp)}</span>
     );
 }
 

@@ -5,20 +5,20 @@ import type {typePosts} from "../../../shared/lib/server";
 const postSlice = createSlice({
     name: 'posts',
     initialState: postsMock,
-    reducers:{
+    reducers: {
         postAdded: {
-            reducer(state, action:PayloadAction<typePosts>) {
+            reducer(state, action: PayloadAction<typePosts>) {
                 state.push(action.payload)
             },
             prepare(title, content, userId) {
                 return {
-                    payload:{
-                        id:nanoid(),
+                    payload: {
+                        id: nanoid(),
                         title,
                         content,
                         userId,
                         date: new Date().toString(),
-                        reactions:{
+                        reactions: {
                             thumbsUp: 0,
                             wow: 0,
                             heart: 0,
@@ -29,17 +29,17 @@ const postSlice = createSlice({
                 }
             }
         },
-        reactionAdded(state, action:PayloadAction<{postId: string, reaction: keyof typePosts['reactions']}>) {
-            const {postId,reaction} = action.payload;
-            const existingPost = state.find(post=>post.id===postId);
-            if(existingPost) {
+        reactionAdded(state, action: PayloadAction<{ postId: string, reaction: keyof typePosts['reactions'] }>) {
+            const {postId, reaction} = action.payload;
+            const existingPost = state.find(post => post.id === postId);
+            if (existingPost) {
                 existingPost.reactions[reaction]++
             }
         }
     }
 })
 
-export const selectAllPost = (state:{posts:typePosts[]})=>state.posts;
+export const selectAllPost = (state: { posts: typePosts[] }) => state.posts;
 
 export const {postAdded, reactionAdded} = postSlice.actions;
 

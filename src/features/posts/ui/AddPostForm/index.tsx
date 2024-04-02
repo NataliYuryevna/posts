@@ -5,7 +5,8 @@ import {useAppDispatch, useUsersSelector, postAdded, selectAllUsers} from "../..
 function AddPostForm() {
     const dispatch = useAppDispatch();
     const users = useUsersSelector(selectAllUsers);
-    function setAddPost( newPost:Omit<typePosts,'id'> ) {
+
+    function setAddPost(newPost: Omit<typePosts, 'id'>) {
         dispatch(
             postAdded(newPost.title, newPost.content, newPost.userId)
         )
