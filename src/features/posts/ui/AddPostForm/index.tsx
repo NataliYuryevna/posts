@@ -6,7 +6,7 @@ function AddPostForm() {
     const dispatch = useAppDispatch();
     const users = useUsersSelector(selectAllUsers);
 
-    function setAddPost(newPost: Omit<typePosts, 'id'>) {
+    function setAddPost(newPost: Omit<typePosts, 'id' | 'reactions' | 'date'>) {
         dispatch(
             postAdded(newPost.title, newPost.content, newPost.userId)
         )

@@ -1,11 +1,9 @@
-import {ChangeEvent, Fragment, useEffect, useState} from "react";
+import {ChangeEvent, Fragment, useState} from "react";
 import './index.css'
 
 interface propsSelect {
     name: string,
-    callback: (v: string) => void,
     labelText: string,
-    changeValue: boolean,
     options: Array<{
         id: string,
         value: string
@@ -16,13 +14,6 @@ function Select(props: propsSelect) {
     const [valueSelect, setValue] = useState<string>('');
 
     const changeHandel = (e: ChangeEvent<HTMLSelectElement>) => setValue(e.target.value);
-
-    useEffect(() => {
-        if (props.changeValue) {
-            props.callback(valueSelect);
-            setValue('');
-        }
-    }, [props.changeValue])
 
     return (
         <Fragment>
