@@ -7,7 +7,7 @@ function PostAuthor(props: { userId: string }) {
     const author = users.find(user => user.id === props.userId);
 
     return (
-        <span>{author ? author.name : 'Unknown author'}</span>
+        <span>{'by'} {author ? author.name : 'Unknown author'}</span>
     );
 }
 
